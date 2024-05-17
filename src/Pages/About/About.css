@@ -1,0 +1,139 @@
+@keyframes color-change {
+  0% { background-color: #504845; }
+  50% { background-color: #87ceeb; }
+  100% { background-color: #b850be; }
+}
+
+@keyframes colorChange {
+  0% { background-color: #80b68f } 
+  50% { background-color: #fe6b86; } 
+  100% { background-color: #81c0a5; } 
+}
+
+@keyframes pulse-border {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Content container styling */
+.content-container {
+  position: relative;
+  padding: 50px 0;
+}
+
+/* Background animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: color-change 5s infinite alternate; 
+  z-index: -1; 
+}
+
+/* Content section styling */
+.content-section {
+  width: 90%;
+  margin-right: 5px;
+  padding: 20px;
+  border: 2px solid #ccc; 
+  border-radius: 10px; 
+  text-align: center;
+  background-color: rgba(193, 128, 128, 0.8); 
+  box-shadow: 0 4px 6px rgba(52, 24, 24, 0.1); 
+  animation: colorChange 3s infinite; 
+}
+
+/* Responsive adjustments for content section */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-section {
+    padding: 15px;
+  }
+}
+
+/* Values section styling */
+.values-container {
+  position: relative; 
+  width: 130%;
+  overflow: hidden; /* Remove the scrollbar */
+  padding: 50px 0;
+}
+
+/* Value card styling */
+.value-section {
+  padding: 30px;
+  background-color: #c96b78;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; 
+}
+
+/* Animated border */
+.value-section::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 3px solid transparent; 
+  border-radius: 15px;
+  animation: pulse-border 2s infinite alternate; 
+}
+
+/* Hover effect for value cards */
+.value-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Background animation styling */
+.background-animation {
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #400812, hsl(60, 4%, 64%));
+  opacity: 0.2;
+  z-index: -1; 
+}
+
+/* Responsive adjustments for value section */
+@media (max-width: 768px) {
+  .value-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .value-section {
+    padding: 15px;
+  }
+}
+
+/* Heading styling */
+.heading {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+/* Paragraph styling */
+.para {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
