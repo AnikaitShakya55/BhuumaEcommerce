@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BhuumaEcommerce/static/css/main.0aebf2ae.css",
-    "main.js": "/BhuumaEcommerce/static/js/main.f06e1410.js",
+    "main.css": "/BhuumaEcommerce/static/css/main.cd692217.css",
+    "main.js": "/BhuumaEcommerce/static/js/main.32aa17aa.js",
     "static/media/girliconpng1.png": "/BhuumaEcommerce/static/media/girliconpng1.0765784d2d0ae253b0e1.png",
     "static/media/girluser.png": "/BhuumaEcommerce/static/media/girluser.0030a393e974cb97f8b4.png",
     "index.html": "/BhuumaEcommerce/index.html",
-    "main.0aebf2ae.css.map": "/BhuumaEcommerce/static/css/main.0aebf2ae.css.map",
-    "main.f06e1410.js.map": "/BhuumaEcommerce/static/js/main.f06e1410.js.map"
+    "main.cd692217.css.map": "/BhuumaEcommerce/static/css/main.cd692217.css.map",
+    "main.32aa17aa.js.map": "/BhuumaEcommerce/static/js/main.32aa17aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.0aebf2ae.css",
-    "static/js/main.f06e1410.js"
+    "static/css/main.cd692217.css",
+    "static/js/main.32aa17aa.js"
   ]
 }
