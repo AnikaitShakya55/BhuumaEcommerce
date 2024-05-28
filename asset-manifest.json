@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/BeautYBar/static/css/main.0a4fa416.css",
-    "main.js": "/BeautYBar/static/js/main.0b03c4f6.js",
+    "main.js": "/BeautYBar/static/js/main.89cabaed.js",
     "static/media/girliconpng1.png": "/BeautYBar/static/media/girliconpng1.0765784d2d0ae253b0e1.png",
     "static/media/girluser.png": "/BeautYBar/static/media/girluser.0030a393e974cb97f8b4.png",
     "index.html": "/BeautYBar/index.html",
     "main.0a4fa416.css.map": "/BeautYBar/static/css/main.0a4fa416.css.map",
-    "main.0b03c4f6.js.map": "/BeautYBar/static/js/main.0b03c4f6.js.map"
+    "main.89cabaed.js.map": "/BeautYBar/static/js/main.89cabaed.js.map"
   },
   "entrypoints": [
     "static/css/main.0a4fa416.css",
-    "static/js/main.0b03c4f6.js"
+    "static/js/main.89cabaed.js"
   ]
 }
