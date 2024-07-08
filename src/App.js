@@ -1,57 +1,24 @@
-import React, { useContext, useState } from "react";
-import "./App.css";
-import Cart from "./Components/Cart/Cart";
-import { Route } from "react-router-dom";
-import Navigation from "./Components/Navigation/Navigation";
-import About from "./Pages/About/About";
-import Contact from "./Pages/ContactUs/Contact";
-import ProductDetails from "./Pages/productdetails/ProductDetails";
-import LoginPage from "./Pages/LoginPage/LoginPage";
-import { AuthContext } from "./Store/Context/AuthContext";
-import { Redirect } from "react-router-dom";
-import HomePage from "./Pages/HomePage/HomePage";
-import Footer from "./Components/Footer/Footer";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import ProductStore from "./Pages/ProductStore/ProductStore";
+import React from 'react'
+import ReducerCounter from './Components/ReducerCounter';
+import {useSelector,useDispatch} from 'react-redux';
+import { addCount } from './store/store';
+
 
 const App = () => {
-  const authctx = useContext(AuthContext)
-  const [showCart, setShowCart] = useState(false);
-  const location = useLocation()
-
-  const cartShowHandler = () => {
-   console.log("true")
-    setShowCart(true);
-  };
-  const cartCloseHandler = () => {
-    setShowCart(false);
-  };
+  const dispatch = useDispatch()
+  const countValue = useSelector((state)=> state.counter.countVal)
+  
+  const addBy1 =()=>{
+    dispatch(addCount())
+  }
 
   return (
-      
     <div>
+      <h1>{countValue}</h1>
 
-     <Navigation cartShowHandler={cartShowHandler} />
-     {showCart && <Cart cartCloseHandler={cartCloseHandler} />}
+      <button onClick={addBy1}>ADDBY1</button>      
+    </div>
+  )
+}
 
-      <main>
-        <Route path='/' exact> <Redirect to ='/home' />  </Route>
-        <Route path='/home' > <HomePage/> </Route>
-      
-        <Route path="/store" exact>     
-                <ProductStore cartShowHandler={cartShowHandler} />
-        </Route>
- 
-        <Route path='/store/:productid'><ProductDetails/></Route>
-        <Route path='/about'><About/></Route>
-        <Route path='/contact'><Contact/> </Route>
-        <Route path="/login"> { !authctx.isLoggedIn && <LoginPage />  } </Route>
-
-      </main>
-
-      {location.pathname !== "/login" && <Footer />}
-
-      </div>  
-  );
-};
-export default App;
+export default App
