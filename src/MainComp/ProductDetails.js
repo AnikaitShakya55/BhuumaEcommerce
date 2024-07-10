@@ -1,11 +1,15 @@
 import React from 'react'
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import { useLocation, useParams } from 'react-router-dom/cjs/react-router-dom.min'
 
 const ProductDetails = () => {
     const param = useParams()
+    const location = useLocation()
+
+
   return (
     <div>
         {param.productId}
+        {location.state.data}
       
     </div>
   )
